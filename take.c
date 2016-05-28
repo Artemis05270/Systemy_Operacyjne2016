@@ -11,9 +11,8 @@ struct {
  
 int main()
 {
-#define KLUCZ 123
         int i = 1, j;
-        int id_kolejki = msgget(KLUCZ, IPC_CREAT | IPC_EXCL);
+        int id_kolejki = 123;
  
         time_t wsk_sekund;
         time(&wsk_sekund);
