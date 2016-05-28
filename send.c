@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <msg.h>
+#include <sys/msg.h>
  
 struct {
 long mtype;
@@ -10,6 +10,7 @@ char mtext[50];
  
 int main()
 {
+int j;
 #define KLUCZ 123
 int id_kolejki=msgget(KLUCZ, IPC_CREAT|IPC_EXCL);
 buf.mtype=123;
